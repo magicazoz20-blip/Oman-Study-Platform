@@ -63,17 +63,14 @@
 - تسجيل البريد مفعّل. النموذج يطلب رمزًا من 8 أرقام، لكن إرسال OTP للطلاب يحتاج SMTP مخصصًا وقالب بريد يحتوي على `{{ .Token }}`؛ خدمة البريد الافتراضية محدودة للاختبارات وعناوين فريق المشروع. راجع [إعداد SMTP](https://supabase.com/docs/guides/auth/auth-smtp) و[قالب OTP](https://supabase.com/docs/guides/auth/auth-email-passwordless).
 - تسجيل Google غير مفعّل حتى إعداد OAuth Client ID وClient Secret في Google Cloud ثم إدخالهما في مزوّد Google داخل Supabase. عنوان callback يظهر في إعدادات المزوّد.
 - تسجيل الهاتف وWhatsApp غير مفعّل؛ يتطلب مزوّد SMS وبيانات Twilio. تتطلب WhatsApp إعداد مرسل WhatsApp، وقد تحتاج Content SID.
-- عنوان الموقع المحلي وإعادة التوجيه مضبوطين على `http://127.0.0.1:4173`. بعد نشر الموقع، أضف عنوان النشر إلى Site URL وRedirect URLs في إعدادات المصادقة.
+- عنوان الموقع في Supabase مضبوط على رابط GitHub Pages، وقائمة إعادة التوجيه تسمح بالموقع المنشور وبالتجربة المحلية على `http://127.0.0.1:4173`.
 
 إعداد المصادقة ينشئ جلسة موثّقة، لكنه لا يزامن التقدم بين الأجهزة؛ ما زال تقدم الدراسة محفوظًا محليًا في المتصفح. انظر [تسجيل الدخول بالهاتف](https://supabase.com/docs/guides/auth/phone-login) و[تسجيل Google](https://supabase.com/docs/guides/auth/social-login/auth-google) لمتطلبات المزوّدين.
 
 ## النشر على GitHub Pages
 
-1. أنشئ مستودعًا جديدًا باسم `Oman-Study-Platform` في حسابك.
-2. ارفع محتويات هذا المجلد إلى الفرع `main` في جذر المستودع.
-3. افتح **Settings → Pages**.
-4. اختر **Deploy from a branch** ثم `main` والمجلد `/ (root)`، واحفظ.
-5. بعد اكتمال النشر، افتح رابط Pages وجرب إضافة ملف كتاب من جهازك. إذا أردت تسجيل دخول موثقًا، أكمل إعداد Supabase أعلاه.
+- المستودع: [Oman-Study-Platform](https://github.com/magicazoz20-blip/Oman-Study-Platform).
+- رابط المنصة: [رِواق](https://magicazoz20-blip.github.io/Oman-Study-Platform/).
+- يُنشر الموقع من الفرع `main` وجذر المستودع `/`، دون خطوة بناء.
 
-لا يحتاج الموقع إلى عملية بناء. لا توجد مفاتيح سرية داخل الملفات. لم يُنشأ مستودع خارجي من هذه الجلسة لعدم توفر اتصال GitHub متصل بالحساب.
-
+لا توجد مفاتيح سرية داخل ملفات الموقع. ملفات الكتب الأصلية غير مرفقة في المستودع؛ يضيف الطالب كتابه من جهازه، وتبقى نسخة PDF على ذلك الجهاز.
